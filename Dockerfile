@@ -3,11 +3,13 @@ MAINTAINER Sarfaraz Ali Khan <mrkhan1417@gmail.com>
 
 RUN apt-get update && apt-get install -y \
   python \
+  python-pip \
   build-essential \
   nodejs \
   git \
   curl
-  
+
+RUN pip install virtualenv
 RUN curl -sL https://deb.nodesource.com/setup_5.x | bash -
 RUN apt-get install --yes nodejs
 
